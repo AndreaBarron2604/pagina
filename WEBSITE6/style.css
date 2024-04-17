@@ -1,0 +1,95 @@
+/* el * es un selector general el cual nos indica los margenes y orillas de la pagina de le puso un margen de 5 unidades y un relleno que es
+padding  que es la distancia entre los bordes y el contenido de la pagina*/
+* {
+    margin: 5;
+    padding: 5;
+}
+/* En el cuerpo de la página se declara  el background-color, este es para darle un color de fondo al documento*/
+body {
+    background-color: rgb(248, 235, 119);
+}
+/* aqui se declara la sección del header(encabezado) donde aparce el logo y la barra de navegación, la sección main que es todo el contenido
+texto de la pagina, y el footer que es el pie de página tendran un tamaño o anchura horizontal de 90px, ayuda a que visualmente nuestro contendo 
+quede despegado de los bordes del documento, el max-width es para establecer el maximo ancho de los elementos del header, de main y del footer
+se establece 2000px, esto ayuda a tener un buen ancho para lo que contienen los elementos header, main y el footer. El margin es para establcer 
+los valores de los margenes  es basicamente la distancia desde donde empieza la página al borde de la página, se establecio de un margen 
+de 20px  para los 4 lados del docuemento y el auto ayuda a centrar el contenido con los margenes establecidos. */
+header, .main, footer{
+    width: 90%;
+    max-width: 2000px;
+    margin: 20px auto;
+}
+/* En la sección de navegación que se encuentra en la cabecera de nuestra pagina se añadio el atributo background-color que este establece el 
+color de fondo que tendrá solo esta sección, el overflow ayuda para que el texto que este en la navegación se ajuste y el hidden hace que el 
+texto que sobresalga por encima del la barra de navegación quede sobrepuesto sobre el espacio de la barra de navegación
+*/
+
+header nav {
+    background-color: rgb(159, 240, 159);
+    overflow: hidden;
+         
+}
+/* se establece que la barra de navegación exactamente las viñetas con ayuda del atributo list-style este es para poner estilo a las listas 
+y con su elemento none ayuda a quitar los puntitos de las viñetas de la sección barra de navegación  */
+
+header nav ul {
+    list-style: none;
+}
+/*La propiedad float nos sirve para alinear y su valor left es para alinear el texto a la izquiera, en este caso el texto que se alineara será
+las listas con viñetas de la barra de navegación */
+ header nav ul li {
+     float: left;
+
+ }
+/* Se declara que la sección de barra de navegación, que son las listas enlazadas que estan en el encabezado tengan una distancia entre ellas
+y el padding nos ayuda a establecer su distancia para que no queden encimadas, el display nos ayuda a desplegar las listas de la barra de 
+navegación y su elemto block nos sirve para poner las listas para que aparezcan con un estilo de cuadro y no una debajo de la otra, el color 
+es para establecer el color de letra de las barras de navegación */
+ header nav ul li a{
+    padding: 10px 20px;
+     display: block;
+     color: sienna;
+ }
+/* Hover: su función es resaltar cuando tocas ciertas secciones, se declara que en la sección de navegación cuando el cursor toque la sección 
+de barra de navegación y de click en alguna opción de la barra esta resalte del color establecido con la ayuda del background*/
+ header nav ul li a:hover{
+     background: rgb(175, 229, 250);
+ }
+/*Con ayuda del width se declara  la anchura de las secciones main y cada uno de los articulos que componen la pagina, el margin-right mos ayuda 
+a establecer el margen derecho de estas secciones,  ayuda a alinear las secciones a la izquierda */
+ .main .articles {
+    width: 58.5%;
+     margin-right: 1.5%;
+     float: left;
+ }
+/* Establce el padding la distancia entre el borde del recuadro donde se encontran las secciones main y los articulos y el texto de estas
+el background establece el color de fondo de estas secciones, el marfin_botton ayuda para que  cada seccion este saparada y que esten separadas
+con una distancia entre cada sección de 20px, así, se veran las secciones separadas y no todas en un mismo recuadro*/
+ .main .articles article {
+    padding: 10px;
+     background: rgb(255, 251, 213);
+     margin-bottom:  20px;
+ }
+/*Aqui el aside es la sección que tiene una información distinta a la de nuestro contenido, normalmente se encuentra publicidad,el width 
+ayuda a establecer el tamaño horizontal de nuestra sección aside, el background es para ponerle un color de fondo a esta sección, el float:left
+nos permite establecer donde se encontrara esta sección y se establece que a la izquierda de nuestro documento,la propiedad box-sizing es para 
+declarar las medidas de nuestro recuadro donde se mostrará el aside y su valor border-box ayuda a que el tamaño de esté se acomode 
+automaticamente sin necesidad de establcer medidas*/
+ aside {
+     width: 40%;
+     background: rgb(235, 177, 235);
+     float: left;
+     box-sizing: border-box;
+ }
+/* Se establece que en el footer o pie de la página tenga un color de fondo orange con ayuda del elemento background, el elemento clear ayuda 
+a establecer si la sección pie de página puede estar al lado de otros elemtos de la pagina y con ayuda del elemrnto both se puede establecer que 
+la sección sea movida para la parte inferior de la pagina, con padding establecemos la distancia de los 4 lados de la sección footer, entre 
+la sección del pie de pagina y el borde de la pagina, y el text-align: nos ayuda a establecer la alineación del texto y center para establecer
+la alineación del texto de manera centrada */
+ footer {
+     background: orange;
+     clear: both;
+     padding: 20px 10px;
+     text-align: center;
+ }
+    
